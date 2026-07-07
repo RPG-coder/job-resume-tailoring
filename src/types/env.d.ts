@@ -1,0 +1,23 @@
+declare namespace NodeJS {
+  interface ProcessEnv {
+    REACT_APP_RESUMENAME: string;
+    REACT_APP_RESUMEADDRESS: string;
+    REACT_APP_RESUMEEMAIL: string;
+    REACT_APP_RESUMEPHONE: string;
+    REACT_APP_RESUMELINKEDIN: string;
+    REACT_APP_RESUMEGITHUB: string;
+    REACT_APP_RESUMEMSEDUCATION: string;
+    REACT_APP_RESUMEMSEDUCATIONYEAR: string;
+    REACT_APP_RESUMEMSEDUCATIONGPA: string;
+    REACT_APP_RESUMEMSEDUCATIONUNIVERSITY: string;
+    REACT_APP_RESUMEBSEDUCATION: string;
+    REACT_APP_RESUMEBSEDUCATIONYEAR: string;
+    REACT_APP_RESUMEBSEDUCATIONUNIVERSITY: string;
+    REACT_APP_WEBAPPURL: string;
+    GOOGLE_API_KEY: string;
+  }
+}
+
+declare var process: {
+  env: NodeJS.ProcessEnv;
+};
