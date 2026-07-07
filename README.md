@@ -91,6 +91,27 @@ npm run watch
 
 ---
 
+## 📝 Google Apps Script Setup (Doc Factory)
+
+To generate clean Google Docs automatically from the extension sidepanel, you must host the `DocumentGenerationScript.gs` file as a Google Apps Script Web App:
+
+1. Navigate to [Google Apps Script](https://script.google.com/) and create a new project.
+2. Delete any default boilerplate code in the editor.
+3. Copy and paste the entire contents of the [DocumentGenerationScript.gs](file:///C:/Users/rahul/OneDrive/Desktop/personal-blog/job-application-assistant/DocumentGenerationScript.gs) file from the root of this repository.
+4. Save the project (click the floppy disk icon or press `Ctrl + S`).
+5. Click **Deploy** (top-right) -> **New deployment**.
+6. Click the gear icon next to "Select type" and select **Web app**.
+7. Configure the deployment settings:
+   - **Description**: Document Generation Web App
+   - **Execute as**: `Me (your-email@gmail.com)`
+   - **Who has access**: `Anyone` (This is required so the extension can send POST requests to compile docs without additional token headers).
+8. Click **Deploy**.
+9. Authorize the necessary permissions for the script to access and create Google Documents in your Google Drive.
+10. Copy the generated **Web App URL** from the success modal.
+11. Paste this URL into your local `.env` file as the value for `REACT_APP_WEBAPPURL`.
+
+---
+
 ## 📂 Architecture Overview
 
 ```mermaid
